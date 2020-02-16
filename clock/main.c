@@ -26,14 +26,14 @@ enum RegisterB
 
 void setPinDDRxForHours(unsigned hour)
 {
-    DDRD |= hour << 2 & (digital_2 | digital_3 | digital_4 | digital_5);
-    PORTD |= hour << 2 & (digital_2 | digital_3 | digital_4 | digital_5);
+    DDRD = hour << 2 & (digital_2 | digital_3 | digital_4 | digital_5);
+    PORTD = hour << 2 & (digital_2 | digital_3 | digital_4 | digital_5);
 }
 
 void setPinDDRxForMinuts(unsigned minute)
 {
-    DDRB |= minute & (digital_8 | digital_9 | digital_10 | digital_11 | digital_12 | digital_13);
-    PORTB |= minute & (digital_8 | digital_9 | digital_10 | digital_11 | digital_12 | digital_13);
+    DDRB = minute & (digital_8 | digital_9 | digital_10 | digital_11 | digital_12 | digital_13);
+    PORTB = minute & (digital_8 | digital_9 | digital_10 | digital_11 | digital_12 | digital_13);
 }
 
 static unsigned hours = 0;
